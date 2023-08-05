@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Result</title>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <link rel="stylesheet" href="../static/css/result.css">
+</head>
+<body>
+    <h1>Search result for {{search_result}}</h1>
+    <div class="table">
+        <table style="width: 100%;">
+            <tr style="text-align: left;">
+                <th>Name</th>
+                <th>Rating & reviews </th>
+                <th>Key Specification</th>
+                <th>Price</th>
+            </tr>
+
+            {% for item in searching %}
+            <tr>
+                <td >{{item['title']}}</td>
+                <td >
+                    <span>{{item['rating']}}⭐</span>
+                    <span>{{item['people_count']}}</span>
+                </td>
+                <td >{{item['key_specs']}}</td>
+                <td >{{item['price']}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+    </div>
+
+</body>
+</html>

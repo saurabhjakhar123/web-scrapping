@@ -1,0 +1,12 @@
+body{
+    background-color: aquamarine;
+}
+table, tr, th{
+    border-collapse:collapse; 
+}
+th,td{border: 1px solid black;
+    padding: 5px;
+}
+.table tr:nth-child(even){
+    background: cyan;
+}
