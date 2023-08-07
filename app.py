@@ -5,10 +5,12 @@ from bs4 import BeautifulSoup as bs
 app = Flask(__name__)
 
 @app.route('/' , methods = ["GET", "POST"])
+@cross.origin()
 def home_page():
     return render_template('index.html')
 
 @app.route('/search', methods = ["GET", "POST"])
+@cross.origin()
 def search_result():
     try:
         items_list = []
